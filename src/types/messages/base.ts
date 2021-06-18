@@ -10,5 +10,6 @@ export interface IBaseMessage<IdType extends string | number = string | number, 
 
 export type ITelegramBaseMessage = IBaseMessage<number, ITelegramUser, 'telegram'>;
 export type IViberBaseMessage = IBaseMessage<string, IUser<string>, 'viber'>;
+export type IWhatsAppBaseMessage = IBaseMessage<string, IUser<string>, 'whatsapp'>;
 
-export type BaseMessages = ITelegramBaseMessage | IViberBaseMessage;
+export type BaseMessages = ITelegramBaseMessage | IViberBaseMessage | IWhatsAppBaseMessage;

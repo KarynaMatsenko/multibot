@@ -21,6 +21,10 @@ export default abstract class BaseBot<BotEvents extends IEvents> extends EventEm
     //     return super.emit(event, ...args);
     // }
 
+    public on = <Key extends ObjectKeys<keyof BotEvents>>(event: Key, listener: (...args: Arguments<BotEvents[Key]>) => void): this => {
+        return super.on(event, listener as (...args: any[]) => void);
+    }
+
     public start = async (): Promise<this> => {
         this._registerEvents();
         return this;

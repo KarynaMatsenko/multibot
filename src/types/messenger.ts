@@ -1,3 +1,3 @@
-type Messenger = 'viber' | 'telegram';
+type Messenger = 'viber' | 'telegram' | 'whatsapp';
 
 export default Messenger;
